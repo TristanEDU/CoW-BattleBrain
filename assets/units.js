@@ -50,4 +50,4 @@ const infantry = {
 		},
 	},
 };
-n 
+
