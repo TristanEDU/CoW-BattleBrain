@@ -27,18 +27,26 @@ let input = {
 	unitCombatState: "defense",
 	unitTerrainType: "mountains",
 };
-console.log(input);
+// console.log(input);
 
 // TODO Import unit
 const path = units[input.unitType][input.unitId];
-console.log("The path console.log", path);
+// console.log("The path console.log", path);
 
 // TODO calculate Total unit hit-point
 
-let totalHitPoints = null;
+// let totalHitPoints = null;
 
 function calcTotalHitPoints() {
+	const unitHP = path.levels[input.unitLevel].hp;
+	const unitLevelPath = path.levels[input.unitLevel];
+	const combatState = input.unitCombatState;
+	
+	Math.max(...Object.values(unitLevelPath[combatState]));
+	const maxAttack = 
+
 
 }
 
-units.infantry.militia
+// console.log(unitHP);
+calcTotalHitPoints();
