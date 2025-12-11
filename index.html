@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/81d6aa6805.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="popup1" class="overlay">
+        <div class="popup popup-one">
+          <h2>Enter your unit info:</h2>
+          <div class="unit-info">
+            <div class="unit-type">
+              <label for="unit-select">Choose a unit:</label>
+
+              <select name="unit-types" id="unit-select">
+                <option value="">--Please choose an option--</option>
+                <option value="infantry">Infantry</option>
+                <option value="ordnance">Ordnance</option>
+                <option value="tanks">Tanks</option>
+                <option value="air">Air</option>
+                <option value="naval">Naval</option>
+                <option value="secret">Secret</option>
+                <option value="goldfishy">Goldfishy</option>
+              </select>
+            </div>
+            <div class="unit-level">
+              <label for="level-select">Choose a level:</label>
+
+              <select name="levels" id="level-select">
+                <option value="">--Please choose an option--</option>
+                <option value="level-one">Level One</option>
+                <option value="level-two">Level Two</option>
+                <option value="level-three">Level Three</option>
+                <option value="level-four">Level Four</option>
+                <option value="level-five">Level Five</option>
+                <option value="level-six">Level Six</option>
+                <option value="level-seven">Level Seven</option>
+                <option value="level-eight">Level Eight</option>
+                <option value="level-nine">Level Nine</option>
+                <option value="goldfishy">Goldfishy</option>
+              </select>
+            </div>
+            <div class="unit-count">
+              <label for="name">Number of units:</label>
+
+              <input type="number" id="name" name="name" required size="10" />
+            </div>
+            <div class="add-unit-info">
+              <button class="add-unit-info-button button" id="enter-unit-info">
+                Enter Unit Info
+              </button>
+            </div>
+          </div>
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            <p id="insult"></p>
+          </div>
+        </div>
+      </div>
+      <div class="enemy">
+        <h1 class="enemy-heading">Enemy Info</h1>
+        <div class="enemy-doctrine">
+          <h3>Doctrine</h3>
+          <div class="doctrine-select">
+            <label for="doctrine-select">Choose a doctrine:</label>
+
+            <select name="doctrine-types" id="doctrine-select">
+              <option value="">--Please choose an option--</option>
+              <option value="axis-power">Axis Power</option>
+              <option value="allies-optimization">Allies Optimization</option>
+              <option value="comintern-quantity">Comintern Quantity</option>
+              <option value="pan-asian-surprise">Pan-Asian Surprise</option>
+              <option value="goldfishy">Goldfishy</option>
+            </select>
+          </div>
+        </div>
+        <div class="enemy-units">
+          <h3>Units</h3>
+          <a
+            class="button"
+            id="add-unit-button"
+            onclick="insultFunction()"
+            href="#popup1"
+            >Add Unit</a
+          >
+        </div>
+        <div class="terrain">
+          <h3>Terrain</h3>
+          <div class="terrain-select">
+            <label for="terrain">Choose a terrain:</label>
+
+            <select name="terrain" id="terrain-select">
+              <option value="">--Please choose an option--</option>
+              <option value="plains">Plains</option>
+              <option value="hills">Hills</option>
+              <option value="mountains">Mountains</option>
+              <option value="forest">Forest</option>
+              <option value="urban">Urban</option>
+              <option value="sea">Sea</option>
+              <option value="goldfishy">Goldfishy</option>
+            </select>
+          </div>
+        </div>
+        <div class="province-ownership-status">
+          <h3>Province Owned by Enemy:</h3>
+          <div class="switch">
+            <input type="checkbox" id="check" />
+            <label for="check" class="toggle"
+              ><i class="fa-regular fa-circle"></i>
+              <!-- <div class="circle"></div> -->
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="friend">
+        <h1>Feature Coming Soon!</h1>
+      </div>
+    </div>
+  </body>
+</html>
