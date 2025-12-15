@@ -41,12 +41,21 @@ function calcTotalHitPoints() {
 	const unitHP = path.levels[input.unitLevel].hp;
 	const unitLevelPath = path.levels[input.unitLevel];
 	const combatState = input.unitCombatState;
-	
-	Math.max(...Object.values(unitLevelPath[combatState]));
-	const maxAttack = 
+	const maxDamage = Math.max(...Object.values(unitLevelPath[combatState]));
+	let terrainMod = null;
+ 
+	if (input.unitCombatState === "defense") {
+		terrainMod = unitLevelPath.terrain[input.unitTerrainType].defenseMod;
+		return console.log(terrainMod);
+	} else if (input.unitCombatState === "attack") {
+		terrainMod = unitLevelPath.terrain[input.unitTerrainType].attackMod;
+		return console.log(terrainMod);
+	}
+	// for (const modIs of unitLevelPath.terrain[input.unitTerrainType]) {}
+	// const terrainMod/
 
-
+	// const maxAttack = maxDamage +
+	// console.log(unitLevelPath.terrain[input.unitTerrainType]);
 }
 
-// console.log(unitHP);
 calcTotalHitPoints();
